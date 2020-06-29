@@ -1,2 +1,29 @@
-	
-<p>Hello World!</p>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Gamepict</title>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+   
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="header__bar row">
+        <h1 class="grid-6"><a href="/">Gamepict</a></h1>
+        <div class="user_nav grid-6">
+          <a class="post" href="/tweets/new">投稿する</a>
+        </div>
+      </div>
+    </header>
+
+    <%= yield %>
+
+    <footer>
+      <p>
+        Copyright Gamepict 2020
+      </p>
+    </footer>
+  </body>
+</html>
