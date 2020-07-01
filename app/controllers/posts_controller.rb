@@ -4,19 +4,20 @@ class PostsController < ApplicationController
 
 
   def index
-    @posts = Post.order("created_at DESC").page(params[:page]).per(5)
+    @posts = Post.includes(:user).order("created_at DESC").page(params[:page]).per(5)
   end
+
 
   def new
   end
 
   def create
-    Post.create(name: post_params[:name], image: post_params[:image], text: post_params[:text], user_id: current_user.id)
+    Post.create(image: post_params[:image], text: post_params[:text], user_id: current_user.id)
   end
 
   private
   def post_params
-    params.permit(:name, :image, :text)
+    params.permit(:image, :text)
   end
 
   def move_to_index
