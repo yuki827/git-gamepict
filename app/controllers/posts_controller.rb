@@ -22,7 +22,16 @@ class PostsController < ApplicationController
     post.destroy if post.user_id == current_user.id
   end
 
+   def edit
+    @post = Post.find(params[:id])
+   end
    
+  def update
+    post = Post.find(params[:id])
+    if post.user_id == current_user.id
+      post.update(post_params)
+    end
+  end
   
   private
   def post_params
