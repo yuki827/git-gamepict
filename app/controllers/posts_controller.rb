@@ -4,7 +4,7 @@ class PostsController < ApplicationController
 
 
   def index
-    @posts = Post.all
+    @posts = Post.order("created_at DESC").page(params[:page]).per(5)
   end
 
   def new
