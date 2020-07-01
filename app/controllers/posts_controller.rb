@@ -2,10 +2,6 @@ class PostsController < ApplicationController
 
   before_action :move_to_index, except: [:index, :show]
 
-  def show
-    @posts = Post.find(params[:id])
-  end
-  
   def index
     @posts = Post.includes(:user).page(params[:page]).per(12).order("created_at DESC")
   end
@@ -32,6 +28,11 @@ class PostsController < ApplicationController
       post.update(post_params)
     end
   end
+  
+  def show
+    @post = Post.find(params[:id])
+  end
+
   
   private
   def post_params
