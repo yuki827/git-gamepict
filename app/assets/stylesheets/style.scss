@@ -1,6 +1,6 @@
-* {
-  outline: 1px solid #ff0000;
-}
+// * {
+//   outline: 1px solid #ff0000;
+// }
 
 
 $accent: #FF9900;
@@ -26,6 +26,8 @@ html {
 body {
   padding-top: 30px;
   font-family: 'Patua One', cursive;
+  background-image: url("game.jpg");
+  background-repeat:repeat;
 }
 
 h1, {
@@ -150,18 +152,28 @@ header {
 
 
 div.contents.row {
-  padding-top:40px;
+  margin-top:20px;
+  padding-top:30px;
+  // background-color:$white;
+  background-color: rgba( 255, 255, 255, 0.55 );
+ 
+  　.container {
+    padding-top:10px;
+   
+}
   
   .username {
- padding-top:20px;
-   }
+padding-top:20px;
+  }
 
   div.content_post {
     padding:10px;
+    bottom:10px;
     margin: 25px;
     position: relative;
     height: 400px;
     color: $white;
+    background-color:$white;
     .more {
       position: absolute;
       cursor: pointer;
@@ -236,7 +248,6 @@ div.contents.row {
     margin: 30px;
     padding: 10px;
     // box-shadow: 0 0 10px rgba($black,0.2);
-    
     box-sizing: border-box;
     
 
@@ -251,8 +262,9 @@ div.contents.row {
       margin: 10px auto;
       padding: 10px;
       border-radius: 10px;
-     
+      box-shadow: 0 0 10px rgba($black,0.2);
     }
+     
     input[type="submit"] {
     
       background-color: $accent;
@@ -274,10 +286,13 @@ div.contents.row {
 }
 
 footer {
+  color: $orange;
   background-color:$black;
-  color: $white;
-  margin:0;
-  padding:0;
+    width:100%;
+    position: fixed;
+    bottom: 0;
+  margin-top: auto;
+  
   p {
     text-align: center;
   }
