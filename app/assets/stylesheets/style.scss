@@ -15,8 +15,8 @@ $kuro: #003300;
 
 
 
-header, footer {
-  background-color: dark;
+header {
+  background-color: $black;
 }
 
 html {
@@ -144,12 +144,14 @@ header {
 
 .user__info {
     background-color:$gray;
+   
   }
  
 
 
 div.contents.row {
   padding-top:40px;
+  
   .username {
  padding-top:20px;
    }
@@ -272,8 +274,10 @@ div.contents.row {
 }
 
 footer {
-  
-  color: $gray;
+  background-color:$black;
+  color: $white;
+  margin:0;
+  padding:0;
   p {
     text-align: center;
   }
