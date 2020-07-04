@@ -67,3 +67,6 @@ gem 'hirb'
 gem 'hirb-unicode'
 gem 'devise'
 gem 'kaminari'
+group :production do
+  gem 'rails_12factor'
+end
