@@ -51,6 +51,11 @@ h3 {
   text-align:center;
 }
 
+h4 {
+  margin-left: 2px;
+  font-family:sans-serif;
+}
+
 
 .nickname {
   color:white;
@@ -298,8 +303,31 @@ footer {
   }
 }
 
+strong {
+  text-shadow: initial;
+  display: inline-block;
+  
+}
 
+.comment-name {
+  color:$kuro;
+  padding-left:10px;
+  font-size:17px;
+  // text-shadow: initial
+   &:hover {
+    color: #CC6600	;
+  }
+  
+  
+}
 
+.comment-text {
+  // text-shadow: initial;
+  font-size:17px;
+  margin-left:25px;
+  
+   
+}
 
 
 * {
