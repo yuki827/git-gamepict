@@ -13,6 +13,11 @@ $white: white;
 $orange: #FF9966;
 $kuro: #003300;
 
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
 
 
 header {
@@ -20,14 +25,16 @@ header {
 }
 
 html {
-  background-color: $white;
+   background-image: url("game.jpg");
+  background-repeat:repeat;
+  background-color:rgba(255,255,255,0.5);
+  background-blend-mode:lighten;
 }
 
 body {
   padding-top: 30px;
   font-family: 'Patua One', cursive;
-  background-image: url("game.jpg");
-  background-repeat:repeat;
+ 
 }
 
 h1, {
@@ -70,6 +77,15 @@ a {
   }
 }
 
+ul li {
+  list-style: none;
+}
+
+.row {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 700px;
+}
 
 .btn {
     padding: 5px;
@@ -147,6 +163,10 @@ header {
       }
     }
   }
+}
+
+.tag {
+  -webkit-filter: drop-shadow(0 0 3px $gray);
 }
 
 .user__info {
@@ -313,7 +333,6 @@ strong {
   color:$kuro;
   padding-left:10px;
   font-size:17px;
-  // text-shadow: initial
    &:hover {
     color: #CC6600	;
   }
@@ -322,39 +341,13 @@ strong {
 }
 
 .comment-text {
-  // text-shadow: initial;
   font-size:17px;
   margin-left:25px;
   
    
 }
 
-
-* {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-
-ul {
-  margin: 0;
-  padding: 0;
-}
-ul li {
-  list-style: none;
-}
-
-.row {
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 700px;
-}
-
 .row .grid-6{
   float: left;
 }
 
-.tag {
-  -webkit-filter: drop-shadow(0 0 3px $gray);
-}
